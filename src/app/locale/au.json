@@ -1,0 +1,8 @@
+{
+    "number":"Please enter a number",
+    "required":"Please enter a value",
+    "date": "Please enter a valid date",
+    "email":"Please enter a valid email",
+
+    "readyToSave":"ready to save"
+}

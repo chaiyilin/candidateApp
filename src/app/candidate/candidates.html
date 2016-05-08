@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h1 class="panel-title">Candidates</h1>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-2 text-center"><strong><h3>Job Id</h3></strong></div>
+            <div class="col-md-2 text-center"><strong><h3>Name</h3></strong></div>
+            <div class="col-md-2 text-center"><strong><h3>Currently Employed?</h3></strong></div>
+            <div class="col-md-2 text-center"><strong><h3>Available After</h3></strong></div>
+            <div class="col-md-2 text-center"><strong><h3>Email</h3></strong></div>
+            <div class="col-md-2 text-center"><strong><h3>Street Address</h3></strong></div>
+        </div>
+        <div class="row candidate" ng-repeat="candidate in CandidatesController.CandidatesService.candidates" ui-sref="candidate(candidate)">
+            <div class="col-md-2 text-center"><h5>{{candidate.jobId}}</h5></div>
+            <div class="col-md-2 text-center"><h5>{{candidate.name}}</h5></div>
+            <div class="col-md-2 text-center"><h5>{{candidate.currentlyEmployed|yesno}}</h5></div>
+            <div class="col-md-2 text-center"><h5>{{candidate.availableDate | date:"dd/MM/yyyy"}}</h5></div>
+            <div class="col-md-2 text-center"><h5>{{candidate.email}}</h5></div>
+            <div class="col-md-2 text-center"><h5>{{candidate.address}}</h5></div>
+        </div>
+    </div>
+</div>
